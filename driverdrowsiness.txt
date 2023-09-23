@@ -1,0 +1,99 @@
+The problem Driver Drowsiness Alert App solves
+Driver drowsiness is an android application that helps to combat a dangerous heavily vehicle accident are social issues known as drowsy driving.
+It takes the driver eye’s and detect the eye by id key and initiates alarm alert when driver tends to sleep while driving.
+We are using the help of Google Mobile Vision Library.
+
+Challenges we ran into
+First we are use the openCV api to detect the face and eye on the android app using the library but last time openCV has stopped their upgraded version of mobile app so after the we develop the app but it is not successfully run over the android phone then we use the Google Mobile Vision Library to detect the face and eye and then we are using the help of google vision api we are create the Driver Drowsiness App.
+
+Google Vision API does not specifically provide a pre-built component for driver drowsiness detection. However, you can utilize various components and techniques to develop a driver drowsiness detection Android app using Google Vision API as part of your solution. Let's explore the components you can consider for implementing such an application.
+
+1. Google Vision API:
+Google Vision API offers powerful image analysis capabilities, including face detection, landmark detection, and facial expression recognition. You can leverage these features to detect and track the driver's face and extract relevant facial attributes.
+
+2. Face Detection:
+Google Vision API provides face detection functionality, allowing you to locate and identify faces in an image or video frame. This component will enable you to track the driver's face in real-time.
+
+3. Facial Landmark Detection:
+Once you detect the face, you can use facial landmark detection to identify specific points on the face, such as the eyes, eyebrows, and mouth. This information can be used to analyze the driver's facial expressions and eye movements.
+
+4. Eye Tracking:
+To detect drowsiness, you can track the driver's eye movements using the facial landmarks obtained from the previous step. By monitoring factors like eye closure duration, blink frequency, and gaze direction, you can determine if the driver's eyes are exhibiting signs of drowsiness or fatigue.
+
+5. Machine Learning Models:
+To perform more advanced drowsiness detection, you can train and utilize machine learning models. You can collect a dataset of labeled images or video frames, including both drowsy and non-drowsy states, and train a model to classify these states based on features like eye openness, head pose, and facial expressions. This model can be integrated into your Android app and combined with Google Vision API for real-time drowsiness detection.
+
+6. Audio-Based Detection:
+In addition to visual cues, you can also consider audio-based techniques to detect drowsiness. For instance, by analyzing the driver's voice patterns and detecting changes in speech characteristics, you can infer drowsiness levels. However, this would require additional audio processing and analysis beyond the scope of Google Vision API.
+
+
+Block diagram :
+
+
+          +-------------------------------------------------+
+          |                     Android App                   |
+          +---------------------+---------------------------+
+                              |
+                              |
+          +---------------------v---------------------------+
+          |                Google Vision API                |
+          +---------------------+---------------------------+
+                              |
+                              |
+          +---------------------v---------------------------+
+          |               Face Detection                    |
+          +---------------------+---------------------------+
+                              |
+                              |
+          +---------------------v---------------------------+
+          |          Facial Landmark Detection              |
+          +---------------------+---------------------------+
+                              |
+                              |
+          +---------------------v---------------------------+
+          |                 Eye Tracking                    |
+          +---------------------+---------------------------+
+                              |
+                              |
+          +---------------------v---------------------------+
+          |            Machine Learning Models              |
+          +---------------------+---------------------------+
+                              |
+                              |
+          +---------------------v---------------------------+
+          |                 Drowsiness Detection            |
+          +---------------------+---------------------------+
+                              |
+                              |
+          +---------------------v---------------------------+
+          |                  App Feedback                   |
+          +-------------------------------------------------+
+```
+
+Here's a breakdown of the components:
+
+1. Android App:
+   - User interface and app logic to capture video frames from the device's camera and process the drowsiness detection.
+
+2. Google Vision API:
+   - The app interacts with Google Vision API to access various image analysis features, such as face detection and facial landmark detection.
+
+3. Face Detection:
+   - Google Vision API's face detection feature identifies and tracks the driver's face in real-time within the captured video frames.
+
+4. Facial Landmark Detection:
+   - The facial landmark detection component utilizes Google Vision API to identify specific points on the driver's face, such as the eyes, eyebrows, and mouth.
+
+5. Eye Tracking:
+   - Based on the detected facial landmarks, eye tracking algorithms analyze the driver's eye movements, blink frequency, and eye closure duration to determine drowsiness levels.
+
+6. Machine Learning Models:
+   - Custom machine learning models can be trained using labeled datasets to classify drowsy and non-drowsy states based on features like eye openness, head pose, and facial expressions.
+
+7. Drowsiness Detection:
+   - The drowsiness detection component combines the output from eye tracking and machine learning models to assess the driver's drowsiness level and trigger alerts or actions accordingly.
+
+8. App Feedback:
+   - The app provides appropriate feedback to the driver, such as visual and audio alerts, to mitigate drowsiness and ensure safe driving.
+
+
